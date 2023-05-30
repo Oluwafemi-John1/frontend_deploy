@@ -11,19 +11,22 @@ import { Routes, Route } from 'react-router-dom'
 import Signin from './components/Signin'
 
 function App() {
-    const getData = () => {
-        const endpoint = "http://localhost:5555/user"
-        // alert('I am working confidently')
-        axios.get(endpoint)
-        .then((result)=>{
-            console.log(result.data);
-        })
-    }
+    // const getData = () => {
+    //     const endpoint = "http://localhost:5555/user"
+    //     // alert('I am working confidently')
+    //     axios.get(endpoint)
+    //     .then((result)=>{
+    //         console.log(result.data);
+    //     })
+    // }
   return (
     <>
         <Routes>
             <Route path="/" element={<Signup/>} />
             <Route path='/signin' element={<Signin/>} />
+            <Route path='/class' element={<Classbased/>} />
+            <Route path='/loadfile' element={<Uploadfile/>} />
+            <Route path='/loadup' element={<Loadup/>} />
         </Routes>
         {/* <button onClick={getData}>Get data</button> */}
         {/* <Signup/> */}
